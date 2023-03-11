@@ -60,5 +60,7 @@
     "@semantic-release/npm",
     "@semantic-release/git"
   ],
-  "branches": ["main", "next"]
+  "release": {
+    "branches": ["master", "next"]
+  }
 }
