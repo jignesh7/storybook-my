@@ -9,13 +9,13 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: 12
+          node-version: 18.15.0
       - name: Install dependencies
         run: npm install 
       - name: Build app
         run: npm run build 
       - name: Semantic release
         env:
-          GITHUB_TOKEN: ${{ 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 }}
-          NPM_TOKEN: ${{ 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 }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx semantic-release
